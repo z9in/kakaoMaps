@@ -35,7 +35,6 @@ function App() {
         style={{ width: "100vw", height: "100vh" }}
         level={11}
         onClick={(_t, mouseEvent) => {
-          console.log(mouseEvent);
           let new_geo = [
             {
               lat: Math.floor(mouseEvent.latLng.getLat() * 10000) / 10000,
@@ -44,7 +43,7 @@ function App() {
           ];
           send(new_geo);
         }}
-        zoomable={false}
+        zoomable={true}
       ></Map>
     </div>
   );
